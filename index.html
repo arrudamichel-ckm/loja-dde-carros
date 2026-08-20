@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperDrive - Loja de Carros Esportivos</title>
+    <style>
+        /* Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #1f2833;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #66fcf1;
+        }
+
+        header h1 {
+            color: #66fcf1;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #66fcf1;
+        }
+
+        /* Banner Principal */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            color: #c5a059;
+            font-size: 18px;
+        }
+
+        /* Grade de Carros */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 60px 20px;
+        }
+
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card do Carro */
+        .car-card {
+            background-color: #1f2833;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .car-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(102, 252, 241, 0.3);
+        }
+
+        .car-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .car-info {
+            padding: 20px;
+        }
+
+        .car-brand {
+            color: #66fcf1;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .car-name {
+            font-size: 22px;
+            margin: 5px 0 15px 0;
+        }
+
+        .car-details {
+            display: flex;
+            justify-content: space-between;
+            color: #c5a059;
+            font-size: 14px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #45a29e;
+            padding-bottom: 10px;
+        }
+
+        .btn-interest {
+            display: block;
+            width: 100%;
+            background-color: #66fcf1;
+            color: #0b0c10;
+            text-align: center;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        .btn-interest:hover {
+            background-color: #45a29e;
+            color: #ffffff;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1f2833;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #c5a059;
+            border-top: 1px solid #45a29e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Topo da Loja -->
+    <header>
+        <h1>SuperDrive</h1>
+        <nav>
+            <a href="#">Estoque</a>
+            <a href="#">Financiamento</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <h2>Sinta a Velocidade</h2>
+        <p>A melhor curadoria de supercarros e modelos exclusivos do mercado.</p>
+    </section>
+
+    <!-- Seção de Veículos -->
+    <main class="container">
+        <div class="car-grid">
+            
+            <!-- Carro 1 -->
+            <div class="car-card">
+                <img src="https://unsplash.com" alt="Ferrari" class="car-image">
+                <div class="car-info">
+                    <span class="car-brand">Ferrari</span>
+                    <h3 class="car-name">F8 Tributo</h3>
+                    <div class="car-details">
+                        <span>V8 Turbo</span>
+                        <span>720 cv</span>
+                    </div>
+                    <button class="btn-interest">Tenho Interesse</button>
+                </div>
+            </div>
+
+            <!-- Carro 2 -->
+            <div class="car-card">
+                <img src="https://unsplash.com" alt="Porsche" class="car-image">
+                <div class="car-info">
+                    <span class="car-brand">Porsche</span>
+                    <h3 class="car-name">911 Turbo S</h3>
+                    <div class="car-details">
+                        <span>6 Cils. Boxer</span>
+                        <span>650 cv</span>
+                    </div>
+                    <button class="btn-interest">Tenho Interesse</button>
+                </div>
+            </div>
+
+            <!-- Carro 3 -->
+            <div class="car-card">
+                <img src="https://unsplash.com" alt="Lamborghini" class="car-image">
+                <div class="car-info">
+                    <span class="car-brand">Lamborghini</span>
+                    <h3 class="car-name">Huracán Evo</h3>
+                    <div class="car-details">
+                        <span>V10 Aspirado</span>
+                        <span>640 cv</span>
+                    </div>
+                    <button class="btn-interest">Tenho Interesse</button>
+                </div>
+            </div>
+
+            <!-- Carro 4 -->
+            <div class="car-card">
+                <img src="https://unsplash.com" alt="Audi" class="car-image">
+                <div class="car-info">
+                    <span class="car-brand">Audi</span>
+                    <h3 class="car-name">R8 V10 Performance</h3>
+                    <div class="car-details">
+                        <span>V10 Quattro</span>
+                        <span>620 cv</span>
+                    </div>
+                    <button class="btn-interest">Tenho Interesse</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 SuperDrive Motors. Imagens de uso livre.</p>
+    </footer>
+
+</body>
+</html>
